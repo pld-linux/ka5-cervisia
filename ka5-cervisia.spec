@@ -1,18 +1,30 @@
-%define		kdeappsver	17.08.2
-%define		qtver		5.3.2
+%define		kdeappsver	18.12.0
+%define		qtver		5.9.0
 %define		kaname		cervisia
-Summary:	Cervisia
+Summary:	Front-end for CVS
 Name:		ka5-%{kaname}
-Version:	17.08.2
+Version:	18.12.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	http://download.kde.org/stable/applications/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	73f93e21d486327d0e777e196578e924
+# Source0-md5:	262d46495cd82ca0995f358fd50804a8
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
+BuildRequires:	Qt5DBus-devel
+BuildRequires:	Qt5Gui-devel >= 5.11.1
+BuildRequires:	Qt5Widgets-devel
 BuildRequires:	cmake >= 2.8.12
-BuildRequires:	kf5-extra-cmake-modules >= 1.4.0
+BuildRequires:	gettext-devel
+BuildRequires:	kf5-extra-cmake-modules >= 5.53.0
+BuildRequires:	kf5-kdesu-devel
+BuildRequires:	kf5-kdoctools-devel
+BuildRequires:	kf5-kiconthemes-devel
+BuildRequires:	kf5-kinit-devel
+BuildRequires:	kf5-kitemviews-devel
+BuildRequires:	kf5-knotifications-devel
+BuildRequires:	kf5-kparts-devel
+BuildRequires:	kf5-kwidgetsaddons-devel
 BuildRequires:	qt5-build >= %{qtver}
 BuildRequires:	rpmbuild(macros) >= 1.164
 BuildRequires:	shared-mime-info
@@ -21,7 +33,10 @@ BuildRequires:	xz
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Cervisia.
+Cervisia is a user friendly version control system front-end for CVS.
+The aim is to support advanced usage of CVS in an easy to use
+interface, featuring conflict resolution, difference and history
+viewers and status for the working copy files.
 
 %prep
 %setup -q -n %{kaname}-%{version}
