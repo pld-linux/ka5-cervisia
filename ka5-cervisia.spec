@@ -42,6 +42,13 @@ The aim is to support advanced usage of CVS in an easy to use
 interface, featuring conflict resolution, difference and history
 viewers and status for the working copy files.
 
+%description -l pl.UTF-8
+Cervisia jest przyjaznym użytkownikowi frontendem do systemu kontroli
+wersji CVS. Celem jest wspieranie zaawansowanego użycia CVSa w łatwy sposób.
+Możliwości Cervisi to między innymi rozwiązywanie konfliktów w kodzie,
+pokazwanie różnic oraz historii projektu a także pokazywanie statusu kopii
+roboczej plików.
+
 %prep
 %setup -q -n %{kaname}-%{version}
 
