@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	22.12.2
+%define		kdeappsver	22.12.3
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		cervisia
 Summary:	Front-end for CVS
 Name:		ka5-%{kaname}
-Version:	22.12.2
+Version:	22.12.3
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	9809d29516583380f81abd57586e5226
+# Source0-md5:	8054b7f0a0f97effe4ce514cfabfcb10
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
 BuildRequires:	Qt5DBus-devel
@@ -149,6 +149,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/cervisia.1*
 %lang(nl) %{_mandir}/nl/man1/cervisia.1*
 %lang(pt) %{_mandir}/pt/man1/cervisia.1*
+%lang(pt_BR) %{_mandir}/pt_BR/man1/cervisia.1*
 %lang(sv) %{_mandir}/sv/man1/cervisia.1*
 %lang(uk) %{_mandir}/uk/man1/cervisia.1*
 %{_datadir}/metainfo/org.kde.cervisia.appdata.xml
